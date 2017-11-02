@@ -2,8 +2,8 @@ import csv
 import nltk
 from nltk.corpus import wordnet
 
-f = open("sample.csv", 'rt')
-g = open('sample.csv', 'rt')
+f = open("1Line.csv", 'rt')
+g = open('1Line.csv', 'rt')
 lines = len(f.readlines())
 dataReader = csv.reader(g)
 data = [ e for e in dataReader]
