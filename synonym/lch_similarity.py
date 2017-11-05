@@ -44,9 +44,9 @@ print(nlen)
 #print(alen)
 Nlen = float(nlen)*float(nlen-1)/2
 #Alen = float(alen)*float(alen-1)/2
-nSim = np.zeros((int(Nlen),3), dtype=object)
+nSim = np.zeros((int(100000),3), dtype=object)
 #aSim = np.zeros((int(Alen),3), dtype=object)
-# nlen = 10
+# nlen = 1000
 print(Nlen)
 #print(Alen)
 i=0
@@ -56,12 +56,12 @@ for i in range (nlen):
     for j in range (nlen):
         if i<j:
             similar = nList[i].wup_similarity(nList[j])
-            if similar > 0.2:
+            if similar > 0.8:
                 nSim[k][0]=nWord[i]
                 nSim[k][1]=nWord[j]
                 nSim[k][2]=similar
                 k += 1
-                if k % 10000==0:
+                if k % 1000==0:
                     print(k)
 print(nSim[:100])
 nosim=nSim.tolist()
