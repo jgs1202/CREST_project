@@ -46,10 +46,9 @@ Nlen = float(nlen)*float(nlen-1)/2
 #Alen = float(alen)*float(alen-1)/2
 nSim = np.zeros((int(Nlen),3), dtype=object)
 #aSim = np.zeros((int(Alen),3), dtype=object)
-
+# nlen = 10
 print(Nlen)
 #print(Alen)
-
 i=0
 j=0
 k=0
@@ -84,7 +83,7 @@ nosim.sort(key=itemgetter(2), reverse=True)
 # print(aSim.shape)
 #print(adsim)
 
-f=open('similarityN.csv', 'w')
+f=open('lch_similarity.csv', 'w')
 writer = csv.writer(f)
 for i in nosim:
     writer.writerow(i)
