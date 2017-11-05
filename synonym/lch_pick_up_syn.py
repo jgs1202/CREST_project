@@ -2,7 +2,7 @@ import csv
 import numpy as np
 from operator import itemgetter
 
-g = open('wup_similarity.csv', 'rt')
+g = open('lch_similarity.csv', 'rt')
 dataReader = csv.reader(g)
 data = [ e for e in dataReader]
 length = len(data)
@@ -25,7 +25,7 @@ for i in range(length):
 print(List)
 i=0
 
-f=open('wup_sim_no_du.csv', 'w')
+f=open('lch_sim_no_du.csv', 'w')
 writer = csv.writer(f)
 for i in List:
     writer.writerow(i)
