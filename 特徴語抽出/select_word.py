@@ -116,15 +116,15 @@ def searchWrite():
             # row += 1
 #print(SERCHLIST)
 
-    f = open(word+'.csv', 'w')
+    f = open("serach-result/"+word+'.csv', 'w')
     writer = csv.writer(f, lineterminator='\n')
     writer.writerows(serchList.tolist())
     f.close()
-    g = open(word+'_first_letter.csv', 'w')
+    g = open("serach-result/"+word+'_first_letter.csv', 'w')
     Writer = csv.writer(g, lineterminator='\n')
     Writer.writerows(SerchList.tolist())
     g.close()
-    h = open(word+'_letter.csv', 'w')
+    h = open("serach-result/"+word+'_letter.csv', 'w')
     WRITER = csv.writer(h, lineterminator='\n')
     WRITER.writerows(SERCHLIST.tolist())
     h.close()
