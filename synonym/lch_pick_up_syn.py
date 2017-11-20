@@ -22,7 +22,6 @@ for i in range(length):
     if (name1 != name2) and (Name1 != Name2):
         List.append(data[i])
 
-print(List)
 i=0
 
 f=open('lch_sim_no_du.csv', 'w')

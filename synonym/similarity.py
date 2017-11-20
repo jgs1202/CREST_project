@@ -3,7 +3,7 @@ import nltk
 from nltk.corpus import wordnet
 import numpy as np
 from operator import itemgetter
-ro
+
 g = open('1LineSingle.csv', 'rt')
 dataReader = csv.reader(g)
 data = [ e for e in dataReader]
@@ -44,29 +44,26 @@ print(nlen)
 #print(alen)
 Nlen = float(nlen)*float(nlen-1)/2
 #Alen = float(alen)*float(alen-1)/2
-nSim = np.zeros((int(100000),3), dtype=object)
+nSim = np.zeros((int(Nlen),3), dtype=object)
 #aSim = np.zeros((int(Alen),3), dtype=object)
-#nlen = 100
+
 print(Nlen)
 #print(Alen)
+
 i=0
 j=0
 k=0
 for i in range (nlen):
     for j in range (nlen):
+
         if i<j:
-<<<<<<< HEAD
             similar = nList[i].wup_similarity(nList[j])
-            if similar > 0.75:
-=======
-            similar = nList[i].lch_similarity(nList[j])
-            if similar > 2.0:
->>>>>>> fa35d2845afad7f41374c53cad925ad9b1fe32ed
+            if similar > 0.2:
                 nSim[k][0]=nWord[i]
                 nSim[k][1]=nWord[j]
                 nSim[k][2]=similar
                 k += 1
-                if k % 1000==0:
+                if k % 10000==0:
                     print(k)
 print(nSim[:100])
 nosim=nSim.tolist()
@@ -88,7 +85,7 @@ nosim.sort(key=itemgetter(2), reverse=True)
 # print(aSim.shape)
 #print(adsim)
 
-f=open('new-lch_similarity.csv', 'w')
+f=open('similarityN.csv', 'w')
 writer = csv.writer(f)
 for i in nosim:
     writer.writerow(i)
