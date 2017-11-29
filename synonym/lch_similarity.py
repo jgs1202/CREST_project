@@ -3,7 +3,7 @@ import nltk
 from nltk.corpus import wordnet
 import numpy as np
 from operator import itemgetter
-
+ro
 g = open('1LineSingle.csv', 'rt')
 dataReader = csv.reader(g)
 data = [ e for e in dataReader]
@@ -55,8 +55,13 @@ k=0
 for i in range (nlen):
     for j in range (nlen):
         if i<j:
+<<<<<<< HEAD
+            similar = nList[i].wup_similarity(nList[j])
+            if similar > 0.75:
+=======
             similar = nList[i].lch_similarity(nList[j])
             if similar > 2.0:
+>>>>>>> fa35d2845afad7f41374c53cad925ad9b1fe32ed
                 nSim[k][0]=nWord[i]
                 nSim[k][1]=nWord[j]
                 nSim[k][2]=similar
