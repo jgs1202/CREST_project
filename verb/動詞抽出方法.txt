@@ -1,0 +1,13 @@
+テキストファイルから動詞のみを抽出する方法を示します。
+
+まず、元ファイルはcsvファイルです。
+今回は42text.csvか220text.csvを用いていて、それぞれ相対パスをcsvを読む部分に通します。
+pick_up_verb42.pyを用いることcsv内の文章中から動詞のみを抜き出しその数を数えることができます。
+また出力ファイルの2列目は動詞の種類を表していて、その詳細を以下に示します。
+
+VB	Verb, base form 原型
+VBD	Verb, past tense 過去形
+VBG	Verb, gerund or present participle 現在進行形
+VBN	Verb, past participle 過去分詞形
+VBP	Verb, non-3rd person singular present 三人称単数でない現在形
+VBZ	Verb, 3rd person singular present 三人称単数現在形

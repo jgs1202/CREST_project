@@ -8,7 +8,7 @@ f = open('sampletxt.csv', 'rt')
 g = open('sampletxt.csv', 'rt')
 lines = len(f.readlines())
 dataReader = csv.reader(g)
-data = [ e for e in dataReader]
+
 List =[[0] for n in range(lines)]
 box =[[0] for n in range(lines)]
 f.close()

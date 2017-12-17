@@ -1,0 +1,26 @@
+    <Grid  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="Grid1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <FlowDocumentReader Name ="documentReader" Grid.Column="2"  Width="Auto"  HorizontalAlignment="Right"  VerticalAlignment="Bottom">
+            </FlowDocumentReader>
+            <Grid>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button Name ="Button1" Content="GetClip"   
+              Grid.Row="0" />
+                <Button Name ="Button2" Content="FindVerbs"   
+              Grid.Row="1" Grid.Column="1" />
+                <Button Name ="Button3" Content="Restore"  
+              Grid.Row="2" Grid.Column="2" />
+            </Grid>
+        <Grid>
+    </Grid>
+    </Grid>
+    </Grid>
